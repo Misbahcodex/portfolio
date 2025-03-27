@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Herosection from "./herosection";
 
 const Navbar = () => {
   return (
@@ -52,17 +53,15 @@ const Navbar = () => {
         </div>
 
         {/* Button */}
-        <button className="bg-black text-white px-4 py-2 rounded-lg">
+        <Link
+          href="/contact"
+          className="bg-black hover:bg-[#4b4b4b] text-white px-4 py-2 rounded-lg"
+        >
           Work With Us
-        </button>
+        </Link>
       </nav>
 
-      <div className="px-[450px] pt-20 flex flex-col gap-2.5 items-start justify-start relative">
-        <div className="bg-[#ffffff] flex rounded-[10px] border-solid border-[#e4e4e4] border-x-[6px] border-y-[6px] pt-[8px] pr-5 pb-[6px] pl-2 gap-2 items-center justify-start h-[42px] w-[380px] relative">
-          <div className="bg-[#903030] rounded-full ml-5 w-[15px] h-4"></div>
-          <div>Website & Product Design for AI B2B Saas</div>
-        </div>
-      </div>
+      <Herosection />
     </div>
   );
 };
